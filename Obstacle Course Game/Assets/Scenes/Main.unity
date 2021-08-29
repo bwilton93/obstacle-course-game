@@ -442,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &293061213
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &463608907
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &494428708
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +867,7 @@ GameObject:
   - component: {fileID: 589676182}
   - component: {fileID: 589676181}
   - component: {fileID: 589676180}
+  - component: {fileID: 589676184}
   m_Layer: 0
   m_Name: Door Button
   m_TagString: Untagged
@@ -947,6 +951,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589676184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589676179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f6decdc8e86de4eb1c64c4c690b9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
 --- !u!1 &961283357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1371801475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1396412530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,6 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1424766680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,6 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1794047433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1829828765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1928768762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,3 +1937,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
