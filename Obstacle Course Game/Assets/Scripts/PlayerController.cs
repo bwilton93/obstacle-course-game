@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float playerSpeed = 5f;
+    [SerializeField] float rotationSpeed = 20f;
+
+    public GameObject camera;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +33,17 @@ public class PlayerController : MonoBehaviour
     {
         // Get the horizontal and vertical axis, default bound to arrow keys or WASD.
         // Range -1 to 1
-        float xTranslation = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
-        float zTranslation = Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime;
+        float horizontalTranslation = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
+        float verticalTranslation = Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime;
         
-        // Move player based on input
-        transform.Translate(xTranslation, 0, zTranslation);        
+        // This gets the camera angle and determines movement direction based on the result
+        Vector3 input = Quaternion.Euler (0, camera.transform.eulerAngles.y, 0) * new Vector3(horizontalTranslation, 0.0f, verticalTranslation);
+
+        transform.position += input;
+
+        if ((horizontalTranslation != 0 || verticalTranslation != 0)) 
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(input), Time.deltaTime * rotationSpeed);
+        }
     }
 }

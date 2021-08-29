@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-    public GameObject player;
-    
     float waitTime = 0.1f;
-
     Color playerColor = new Color(1f, 0.6428061f, 0f);
-
+    
+    public GameObject player;
+    private Scoring playerLives;
+    
     void Start() 
     {
         player = GameObject.Find("Player (Cappy)");
+        playerLives = player.GetComponent<Scoring>();
     }
 
     private void OnCollisionEnter(Collision other) 
     {
         Debug.Log("Ouch you hit the wall!");
         StartCoroutine(changeColor());
+        playerLives.playerLives -= 1;
     }
    
     IEnumerator changeColor() 
     {
-        // timePassed = 0;
         player.GetComponent<MeshRenderer>().material.color = Color.red;
 
         yield return new WaitForSeconds(waitTime);
