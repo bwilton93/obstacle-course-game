@@ -24,3 +24,12 @@ Obstacles:
 - Rotating obstacles
 - Damage player / reduce score on each obstacle hit
 - Falling obstacles?
+
+Player experience:
+Agile, fast action.
+
+Core mechanic:
+Move through course and dodge obstacles.
+
+Game loop:
+Get from A to B.
