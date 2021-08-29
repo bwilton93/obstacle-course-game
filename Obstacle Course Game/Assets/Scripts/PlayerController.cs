@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
 
         transform.position += input;
 
+        // This make the bean man rotate in the direction he is walking.
+        // It only sets a rotation when there is an input
+        // This prevents the character rotation from resetting to 0,0,0 when keys are released
         if ((horizontalTranslation != 0 || verticalTranslation != 0)) 
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(input), Time.deltaTime * rotationSpeed);
