@@ -10,20 +10,21 @@ public class GemMovement : MonoBehaviour
 
     Vector3 pos;
 
-    void Start() 
-    {
+    void Start() {
         // Get gem current position
         pos = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        moveGem();
+    }
+
+    private void moveGem() {
         // Calculate new Y (height) position
         float newY = Mathf.Sin(Time.time * speed) * height + pos.y;
         // Set the object's height to the new calculated Y value
         transform.position = new Vector3(pos.x, newY, pos.z);
-
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
     }
 }

@@ -9,13 +9,11 @@ public class ButtonActivate : MonoBehaviour
     private Scoring playerScore;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         door = GameObject.Find("Door");   
     }
 
-    private void OnCollisionEnter(Collision other) 
-    {
+    private void OnCollisionEnter(Collision other) {
         // Open door and disable door collider so player can move through without losing lives
         door.transform.position = new Vector3(1.5f, -0.9f, 4.62f);   
         door.GetComponent<Collider>().enabled = false; 

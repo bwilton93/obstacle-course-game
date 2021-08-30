@@ -6,7 +6,8 @@ public class WinCondition : MonoBehaviour
 {
     public PlayerStats levelScore;
     public GameObject liftDoor;
-    bool levelComplete = false;
+    public bool levelComplete = false;
+    public bool touchingLift = false;
     private int tempScore;
 
     // Start is called before the first frame update
@@ -42,7 +43,9 @@ public class WinCondition : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if (levelComplete) {
+            touchingLift = true;
             Debug.Log("You win!");
+            // GameObject.Find("Player (Cappy)").GetComponent<Collider>().enabled = false;
             levelComplete = false;
         }
     }

@@ -10,21 +10,18 @@ public class ObjectHit : MonoBehaviour
     public GameObject player;
     private PlayerStats playerLives;
     
-    void Start() 
-    {
+    void Start() {
         player = GameObject.Find("Player (Cappy)");
         playerLives = player.GetComponent<PlayerStats>();
     }
 
-    private void OnCollisionEnter(Collision other) 
-    {
+    private void OnCollisionEnter(Collision other) {
         Debug.Log("Ouch you hit the wall!");
         StartCoroutine(changeColor());
         playerLives.playerLives -= 1;
     }
    
-    IEnumerator changeColor() 
-    {
+    IEnumerator changeColor() {
         player.GetComponent<MeshRenderer>().material.color = Color.red;
         yield return new WaitForSeconds(waitTime);
         player.GetComponent<MeshRenderer>().material.color = playerColor;

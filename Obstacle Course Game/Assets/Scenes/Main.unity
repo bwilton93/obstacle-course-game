@@ -502,7 +502,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293061213}
-  m_LocalRotation: {x: 0.18227151, y: 0.8141419, z: -0.42984635, w: 0.34522778}
+  m_LocalRotation: {x: 0.18227151, y: 0.8141419, z: -0.42984635, w: 0.34522775}
   m_LocalPosition: {x: -5.17, y: 11.53, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 494428713}
   m_Layer: 0
   m_Name: Player (Cappy)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,7 +874,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   rotationSpeed: 20
-  camera: {fileID: 293061213}
+  startMarker: {fileID: 0}
+  endMarker: {fileID: 0}
+  camera: {fileID: 961283359}
+  lift: {fileID: 0}
 --- !u!1 &501724852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1217,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961283357}
-  m_LocalRotation: {x: 0.18227151, y: 0.8141419, z: -0.42984635, w: 0.34522778}
+  m_LocalRotation: {x: 0.18227151, y: 0.8141419, z: -0.42984635, w: 0.34522775}
   m_LocalPosition: {x: -5.17, y: 11.53, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

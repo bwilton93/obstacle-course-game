@@ -6,13 +6,11 @@ public class Scoring : MonoBehaviour
 {
     public PlayerStats playerScore;
 
-    void Start()
-    {
+    void Start() {
         playerScore = GameObject.Find("Player (Cappy)").GetComponent<PlayerStats>();
     }
 
-    private void OnCollisionEnter(Collision other) 
-    {
+    private void OnCollisionEnter(Collision other) {
         playerScore.levelScore += 100;
         playerScore.totalScore += 100;
 
