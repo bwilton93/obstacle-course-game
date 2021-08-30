@@ -29,7 +29,8 @@ public class WinCondition : MonoBehaviour
         {
             liftDoor.GetComponent<MeshRenderer>().material.color = Color.white;
             
-            // liftDoor.GetComponent<ObjectHit>().enabled = false;
+            // Loop through all children objects and disable object hit script
+            // This allows the player to touch the door without taking damage.
             for (int i = 0; i < this.gameObject.transform.childCount; i++)
             {
                 this.gameObject.transform.GetChild(i).GetComponent<ObjectHit>().enabled = false;
