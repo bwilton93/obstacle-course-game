@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float playerSpeed = 5f;
+    [SerializeField] float playerSpeed = 60f;
     [SerializeField] float rotationSpeed = 20f;
+    [SerializeField] float playerDrag = 10f;
 
     public Transform startMarker;
     public Transform endMarker;
     
-    public new Camera camera;
-    
+    public GameObject worldGrid;
     public GameObject lift;
     public GameObject playerStats;
     
@@ -34,15 +34,22 @@ public class PlayerController : MonoBehaviour
         lift = GameObject.Find("Lift");
         playerStats = GameObject.Find("Player Stats Container");
         liftPosition();
+
+        GetComponent<Rigidbody>().drag = playerDrag;
+    }
+
+    // Player movement has to be in FixedUpdate due to the nature of AddForce
+    void FixedUpdate() {
+        if (!touchingLift) {
+            movePlayer();
+        }
     }
 
     // Update is called once per frame
     void Update() {
         touchingLift = lift.GetComponent<WinCondition>().touchingLift;
 
-        if (!touchingLift) {
-            movePlayer();
-        } else if (touchingLift) {
+        if (touchingLift) {
             autoMovePlayer();
         } else if (movementLocked) {
 
@@ -59,20 +66,25 @@ public class PlayerController : MonoBehaviour
     void movePlayer() {
         // Get the horizontal and vertical axis, default bound to arrow keys or WASD.
         // Range -1 to 1
-        float horizontalTranslation = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
-        float verticalTranslation = Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime;
+        float horizontalTranslation = Input.GetAxis("Horizontal") * playerSpeed;
+        float verticalTranslation = Input.GetAxis("Vertical") * playerSpeed;
+
+        Debug.Log(horizontalTranslation);
+        Debug.Log(verticalTranslation);
         
         // This gets the camera angle and determines movement direction based on the result
-        Vector3 input = Quaternion.Euler (0, camera.transform.eulerAngles.y, 0) * new Vector3(horizontalTranslation, 0.0f, verticalTranslation);
-
-        transform.position += input;
+        Vector3 input = Quaternion.Euler (0, worldGrid.transform.eulerAngles.y, 0) * new Vector3(horizontalTranslation, 0.0f, verticalTranslation);
 
         // This make the bean man rotate in the direction he is walking.
         // It only sets a rotation when there is an input
         // This prevents the character rotation from resetting to 0,0,0 when keys are released
         if ((horizontalTranslation != 0 || verticalTranslation != 0)) {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(input), Time.deltaTime * rotationSpeed);
+
         }
+
+        GetComponent<Rigidbody>().AddForce(worldGrid.transform.forward * verticalTranslation);
+        GetComponent<Rigidbody>().AddForce(worldGrid.transform.right * horizontalTranslation);
     }
 
     void autoMovePlayer() {
@@ -121,5 +133,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator waitTimer() {
         yield return new WaitForSeconds(waitTime);
         moveToLift = true;
+    }
+
+    private void OnCollisionStay(Collision other) {
+        Vector3 previousPosition = new Vector3(transform.position.x, 1f, transform.position.z);
+        transform.position = previousPosition;
     }
 }
