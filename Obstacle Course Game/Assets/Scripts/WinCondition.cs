@@ -6,18 +6,17 @@ public class WinCondition : MonoBehaviour
 {
     public PlayerStats levelScore;
     public GameObject liftDoor;
+    bool levelComplete = false;
     private int tempScore;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         levelScore = GameObject.Find("Player (Cappy)").GetComponent<PlayerStats>();
         liftDoor = GameObject.Find("Lift Door");
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         // For some reason I have to set up a temporary integer variable? 
         // This works though so just leave it.
         tempScore = levelScore.levelScore;
@@ -37,6 +36,14 @@ public class WinCondition : MonoBehaviour
             }
 
             levelScore.levelScore = 0;
+            levelComplete = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (levelComplete) {
+            Debug.Log("You win!");
+            levelComplete = false;
         }
     }
 }
