@@ -8,12 +8,12 @@ public class ObjectHit : MonoBehaviour
     Color playerColor = new Color(1f, 0.6428061f, 0f);
     
     public GameObject player;
-    private Scoring playerLives;
+    private PlayerStats playerLives;
     
     void Start() 
     {
         player = GameObject.Find("Player (Cappy)");
-        playerLives = player.GetComponent<Scoring>();
+        playerLives = player.GetComponent<PlayerStats>();
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -26,9 +26,7 @@ public class ObjectHit : MonoBehaviour
     IEnumerator changeColor() 
     {
         player.GetComponent<MeshRenderer>().material.color = Color.red;
-
         yield return new WaitForSeconds(waitTime);
-
         player.GetComponent<MeshRenderer>().material.color = playerColor;
     }
 }

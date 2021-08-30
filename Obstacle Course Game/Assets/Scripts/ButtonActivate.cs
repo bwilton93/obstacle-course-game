@@ -11,8 +11,7 @@ public class ButtonActivate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        door = GameObject.Find("Door");
-        playerScore = GameObject.Find("Player (Cappy)").GetComponent<Scoring>();
+        door = GameObject.Find("Door");   
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -23,7 +22,5 @@ public class ButtonActivate : MonoBehaviour
 
         // Turn off switch collider to prevent repeat scoring
         GetComponent<Collider>().enabled = false;
-
-        playerScore.playerScore += 100;    
     }
 }
