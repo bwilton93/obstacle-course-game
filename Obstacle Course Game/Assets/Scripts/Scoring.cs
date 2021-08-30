@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Scoring : MonoBehaviour
 {
+    public GameObject player;
     public PlayerStats playerScore;
 
     void Start() {
-        playerScore = GameObject.Find("Player (Cappy)").GetComponent<PlayerStats>();
+        player = GameObject.Find("Player (Cappy)");
+        playerScore = GameObject.Find("Player Stats Container").GetComponent<PlayerStats>();
     }
 
     private void OnCollisionEnter(Collision other) {

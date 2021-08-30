@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,20 +10,29 @@ public class PlayerController : MonoBehaviour
 
     public Transform startMarker;
     public Transform endMarker;
+    
     public new Camera camera;
+    
     public GameObject lift;
+    public GameObject playerStats;
+    
     private float waitTime = 0.5f;
-    private float autoSpeed = 0.004f;
+    private float autoSpeed = 0.008f;
+    
     private Vector3 currentPos;
     private Vector3 liftPos;
     private Vector3 targetPos;
+    
+    public bool movementLocked = false;
+    public bool moveToLift = false;
+    public bool scoreAdded = false;
     private bool touchingLift;
-    private bool moveToLift = false;
 
     // Start is called before the first frame update
     void Start() {
         PrintInstructions();
         lift = GameObject.Find("Lift");
+        playerStats = GameObject.Find("Player Stats Container");
         liftPosition();
     }
 
@@ -34,6 +44,8 @@ public class PlayerController : MonoBehaviour
             movePlayer();
         } else if (touchingLift) {
             autoMovePlayer();
+        } else if (movementLocked) {
+
         }
     }
 
@@ -71,12 +83,22 @@ public class PlayerController : MonoBehaviour
 
         getCurrentPosition();
         setTargetPos();
+        // Debug.Log(targetPos.z);
 
         // Move player to front of lift, then slide into lift area to complete level
         transform.position = Vector3.Slerp(currentPos, targetPos, autoSpeed);
         
         if(!moveToLift) {
             StartCoroutine(waitTimer());
+
+            if(!scoreAdded) {
+                playerStats.GetComponent<PlayerStats>().currentLevel++;
+                scoreAdded = true;
+            }
+        }
+
+        if(Mathf.Round(transform.position.z * 1000) / 1000.0f == targetPos.z) {
+            SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         }
     }
 

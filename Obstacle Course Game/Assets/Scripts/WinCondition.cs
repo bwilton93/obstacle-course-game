@@ -12,7 +12,7 @@ public class WinCondition : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        levelScore = GameObject.Find("Player (Cappy)").GetComponent<PlayerStats>();
+        levelScore = GameObject.Find("Player Stats Container").GetComponent<PlayerStats>();
         liftDoor = GameObject.Find("Lift Door");
     }
 
