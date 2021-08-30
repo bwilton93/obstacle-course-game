@@ -27,7 +27,7 @@ public class WinCondition : MonoBehaviour
         // Also resets level score for next level
         if (tempScore == 500) 
         {
-            liftDoor.GetComponent<MeshRenderer>().material.color = Color.white;
+            liftDoor.GetComponent<MeshRenderer>().material.color = Color.black;
             
             // Loop through all children objects and disable object hit script
             // This allows the player to touch the door without taking damage.

@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     public Transform endMarker;
     public new Camera camera;
     public GameObject lift;
+    private float waitTime = 0.5f;
+    private float autoSpeed = 0.004f;
     private Vector3 currentPos;
     private Vector3 liftPos;
     private Vector3 targetPos;
     private bool touchingLift;
-    private bool insideLift;
+    private bool moveToLift = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
         if (!touchingLift) {
             movePlayer();
-        } else if (touchingLift && !insideLift) {
+        } else if (touchingLift) {
             autoMovePlayer();
         }
     }
@@ -71,7 +73,11 @@ public class PlayerController : MonoBehaviour
         setTargetPos();
 
         // Move player to front of lift, then slide into lift area to complete level
-        transform.position = Vector3.Lerp(currentPos, targetPos, 0.01f);
+        transform.position = Vector3.Slerp(currentPos, targetPos, autoSpeed);
+        
+        if(!moveToLift) {
+            StartCoroutine(waitTimer());
+        }
     }
 
     void getCurrentPosition() {
@@ -83,6 +89,15 @@ public class PlayerController : MonoBehaviour
     }
 
     void setTargetPos() {
-        targetPos = new Vector3(liftPos.x, 1f, liftPos.z - 0.5f);
+        if (!moveToLift) {
+            targetPos = new Vector3(liftPos.x, 1f, liftPos.z + 1f);
+        } else {
+            targetPos = new Vector3(liftPos.x, 1f, liftPos.z - 0.5f);
+        }
+    }
+
+    IEnumerator waitTimer() {
+        yield return new WaitForSeconds(waitTime);
+        moveToLift = true;
     }
 }
