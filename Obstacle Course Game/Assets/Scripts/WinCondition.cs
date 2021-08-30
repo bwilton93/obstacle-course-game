@@ -33,7 +33,7 @@ public class WinCondition : MonoBehaviour
             // This allows the player to touch the door without taking damage.
             for (int i = 0; i < this.gameObject.transform.childCount; i++)
             {
-                this.gameObject.transform.GetChild(i).GetComponent<ObjectHit>().enabled = false;
+                Destroy(this.gameObject.transform.GetChild(i).GetComponent<ObjectHit>());
             }
 
             levelScore.levelScore = 0;
