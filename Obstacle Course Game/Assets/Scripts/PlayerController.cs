@@ -68,9 +68,6 @@ public class PlayerController : MonoBehaviour
         // Range -1 to 1
         float horizontalTranslation = Input.GetAxis("Horizontal") * playerSpeed;
         float verticalTranslation = Input.GetAxis("Vertical") * playerSpeed;
-
-        Debug.Log(horizontalTranslation);
-        Debug.Log(verticalTranslation);
         
         // This gets the camera angle and determines movement direction based on the result
         Vector3 input = Quaternion.Euler (0, worldGrid.transform.eulerAngles.y, 0) * new Vector3(horizontalTranslation, 0.0f, verticalTranslation);

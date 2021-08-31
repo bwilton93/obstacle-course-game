@@ -12,7 +12,7 @@ public class Scoring : MonoBehaviour
         playerScore = GameObject.Find("Player Stats Container").GetComponent<PlayerStats>();
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         playerScore.levelScore += 100;
         playerScore.totalScore += 100;
 

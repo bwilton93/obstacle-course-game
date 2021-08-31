@@ -20,7 +20,8 @@ public class ButtonActivate : MonoBehaviour
             door = GameObject.Find("Door");   
             // Open door and disable door collider so player can move through without losing lives
             door.transform.position = new Vector3(1.5f, -0.9f, 4.62f);   
-            door.GetComponent<Collider>().enabled = false; 
+            door.GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().enabled = false; 
 
             // Turn off switch trigger to prevent repeat scoring
             GetComponent<Collider>().isTrigger = false;
