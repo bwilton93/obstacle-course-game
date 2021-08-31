@@ -9,10 +9,4 @@ public class PrintToConsole : MonoBehaviour
     {
         Debug.Log("I'm meant to be a car, but I'm really badly designed!");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -14,9 +14,6 @@ public class FadeToBlack : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void start() {
-    }
-
     // Update is called once per frame
     void Update()
     {

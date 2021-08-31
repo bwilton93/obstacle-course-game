@@ -131,9 +131,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         moveToLift = true;
     }
-
-    private void OnCollisionStay(Collision other) {
-        Vector3 previousPosition = new Vector3(transform.position.x, 1f, transform.position.z);
-        transform.position = previousPosition;
-    }
+    
+    // *****
+    // I don't think this actually does anything, disabling it doesn't break the game so we'll see.
+    // Leaving it here commented out just in case.
+    // *****
+    // private void OnCollisionStay(Collision other) {
+    //     Vector3 previousPosition = new Vector3(transform.position.x, 1f, transform.position.z);
+    //     transform.position = previousPosition;
+    // }
 }

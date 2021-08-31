@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 589676180}
   - component: {fileID: 589676184}
   m_Layer: 0
-  m_Name: Window Button
+  m_Name: Projectile Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
