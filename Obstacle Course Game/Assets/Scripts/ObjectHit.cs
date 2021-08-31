@@ -9,6 +9,7 @@ public class ObjectHit : MonoBehaviour
     
     public GameObject player;
     public GameObject playerStats;
+    public GameObject door;
     private PlayerStats playerLives;
     
     void Start() {
@@ -21,6 +22,15 @@ public class ObjectHit : MonoBehaviour
         Debug.Log("Ouch you hit the wall!");
         StartCoroutine(changeColor());
         playerLives.playerLives -= 1;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (this.name == "Window Lock Switch") {
+            door.transform.position = new Vector3(door.transform.position.x, -0.9f, door.transform.position.z); 
+            door.GetComponent<Collider>().enabled = false;
+
+            Destroy(other.gameObject);
+        }
     }
    
     IEnumerator changeColor() {
