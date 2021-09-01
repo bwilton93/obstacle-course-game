@@ -17,12 +17,15 @@ public class FadeToBlack : MonoBehaviour
         player = GameObject.Find("Player (Cappy)");
 
         if (player.GetComponent<PlayerController>().moveToLift) {
-            StartCoroutine(FadeBlackOutSquare(true)); 
+            StartCoroutine(FadeBlackOutSquare(true));
         }
 
         if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
             StartCoroutine(FadeBlackOutSquare(false));
         }
+    }
+
+    private void Awake() {       
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack, int fadeSpeed = 2) {

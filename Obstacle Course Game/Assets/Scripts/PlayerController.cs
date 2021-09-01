@@ -64,6 +64,10 @@ public class PlayerController : MonoBehaviour
             // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             resetLevel();
         }
+
+        if(transform.position.z == targetPos.z) {
+            StartCoroutine(SceneTransitionTimer());
+        }
     }
 
     void PrintInstructions() {
@@ -115,10 +119,6 @@ public class PlayerController : MonoBehaviour
                 scoreAdded = true;
             }
         }
-
-        if(transform.position.z == targetPos.z) {
-            SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
-        }
     }
 
     void getCurrentPosition() {
@@ -141,6 +141,13 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         playerStats.GetComponent<PlayerStats>().totalScore -= playerStats.GetComponent<PlayerStats>().levelScore;
         playerStats.GetComponent<PlayerStats>().levelScore = 0;
+    }
+
+    // DON'T DELETE THIS.
+    // This slows down the scene load, to prevent the fade in/out from breaking
+    IEnumerator SceneTransitionTimer() {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
     }
 
     // *****
