@@ -19,7 +19,6 @@ public class ObjectHit : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Ouch you hit the wall!");
         StartCoroutine(changeColor());
         playerLives.playerLives -= 1;
     }
@@ -28,6 +27,9 @@ public class ObjectHit : MonoBehaviour
         if (this.name == "Window Lock Switch") {
             door.transform.position = new Vector3(door.transform.position.x, -0.9f, door.transform.position.z); 
             door.GetComponent<Collider>().enabled = false;
+
+            // Changes door lock switch to indicate door is now open
+            GetComponent<MeshRenderer>().material.color = new Vector4(0.4245283f, 0f, 0f, 1f);
 
             Destroy(other.gameObject);
         }

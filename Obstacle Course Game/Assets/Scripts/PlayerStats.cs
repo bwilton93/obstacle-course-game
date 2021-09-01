@@ -8,8 +8,4 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public int playerLives = 3;
     [SerializeField] public int levelScore = 0;
     [SerializeField] public int totalScore = 0;
-
-    public void Awake() {
-        DontDestroyOnLoad(gameObject);
-    }
 }

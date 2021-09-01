@@ -10,10 +10,6 @@ public class FadeToBlack : MonoBehaviour
     public GameObject player;
     public GameObject playerStats;
 
-    public void Awake() {
-        DontDestroyOnLoad(gameObject);
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 currentPos;
     private Vector3 liftPos;
     private Vector3 targetPos;
+    private Vector3 levelStartPos;
     
     public bool movementLocked = false;
     public bool moveToLift = false;
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
         lift = GameObject.Find("Lift");
         playerStats = GameObject.Find("Player Stats Container");
         liftPosition();
+
+        levelStartPos = transform.position;
 
         GetComponent<Rigidbody>().drag = playerDrag;
     }
@@ -53,6 +56,12 @@ public class PlayerController : MonoBehaviour
             autoMovePlayer();
         } else if (movementLocked) {
 
+        }
+
+        if (Input.GetKeyDown("r")) {
+            // transform.position = levelStartPos;
+            // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+            SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         }
     }
 
