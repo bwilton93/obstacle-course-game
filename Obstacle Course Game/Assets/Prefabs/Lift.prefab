@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16894054f5e106742b0e18ec85ca4846, type: 2}
+  - {fileID: 2100000, guid: d6c5c224a566531439f7d3b5005f58bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerStats: {fileID: 0}
+  door: {fileID: 0}
+  door2: {fileID: 0}
 --- !u!1 &1457453826667479925
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerStats: {fileID: 0}
+  door: {fileID: 0}
+  door2: {fileID: 0}
 --- !u!1 &1457453827595571519
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerStats: {fileID: 0}
+  door: {fileID: 0}
+  door2: {fileID: 0}
 --- !u!1 &1457453827795165381
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerStats: {fileID: 0}
+  door: {fileID: 0}
+  door2: {fileID: 0}
 --- !u!1 &6490208347138067590
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,4 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba0149d9fa7be3489b7701f272245ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScore: {fileID: 0}
+  levelScore: {fileID: 0}
+  liftDoor: {fileID: 0}
+  levelComplete: 0
+  touchingLift: 0
