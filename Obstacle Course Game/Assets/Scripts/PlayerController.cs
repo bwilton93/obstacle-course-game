@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("r")) {
             // transform.position = levelStartPos;
             // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
-            SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
+            resetLevel();
             playerStats.GetComponent<PlayerStats>().totalScore -= playerStats.GetComponent<PlayerStats>().levelScore;
             playerStats.GetComponent<PlayerStats>().levelScore = 0;
         }
@@ -107,10 +107,10 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(targetPos.z);
 
         // Move player to front of lift, then slide into lift area to complete level
-        transform.position = Vector3.Slerp(currentPos, targetPos, autoSpeed);
+        transform.position = Vector3.MoveTowards(currentPos, targetPos, autoSpeed);
         
         if(!moveToLift) {
-            StartCoroutine(waitTimer());
+            moveToLift = true;
 
             if(!scoreAdded) {
                 playerStats.GetComponent<PlayerStats>().currentLevel++;
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(Mathf.Round(transform.position.z * 1000) / 1000.0f == targetPos.z) {
+        if(transform.position.z == targetPos.z) {
             SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         }
     }
@@ -138,18 +138,21 @@ public class PlayerController : MonoBehaviour
             targetPos = new Vector3(liftPos.x, 1f, liftPos.z - 0.5f);
         }
     }
-
-    IEnumerator waitTimer() {
-        yield return new WaitForSeconds(waitTime);
-        moveToLift = true;
-    }
     
+    public void resetLevel() {
+        SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
+    }
+
     // *****
     // I don't think this actually does anything, disabling it doesn't break the game so we'll see.
     // Leaving it here commented out just in case.
+    // 
+    // This was something to do with constraining a player to the boundary,
+    // but the new move method of AddForce seems to have made it redundant.
     // *****
     // private void OnCollisionStay(Collision other) {
     //     Vector3 previousPosition = new Vector3(transform.position.x, 1f, transform.position.z);
     //     transform.position = previousPosition;
     // }
+
 }
