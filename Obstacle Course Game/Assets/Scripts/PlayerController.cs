@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
         if (touchingLift) {
             autoMovePlayer();
+            playerStats.GetComponent<PlayerStats>().levelScore = 0;
         } else if (movementLocked) {
 
         }
@@ -62,6 +63,8 @@ public class PlayerController : MonoBehaviour
             // transform.position = levelStartPos;
             // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
+            playerStats.GetComponent<PlayerStats>().totalScore -= playerStats.GetComponent<PlayerStats>().levelScore;
+            playerStats.GetComponent<PlayerStats>().levelScore = 0;
         }
     }
 

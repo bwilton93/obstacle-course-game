@@ -36,7 +36,7 @@ public class WinCondition : MonoBehaviour
                 Destroy(this.gameObject.transform.GetChild(i).GetComponent<ObjectHit>());
             }
 
-            levelScore.levelScore = 0;
+            // levelScore.levelScore = 0;
             levelComplete = true;
         }
     }
