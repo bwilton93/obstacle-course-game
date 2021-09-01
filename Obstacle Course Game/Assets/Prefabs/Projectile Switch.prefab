@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2559460708119888572}
   - component: {fileID: 2559460708119888573}
   m_Layer: 0
-  m_Name: Window Lock Switch
-  m_TagString: Untagged
+  m_Name: Projectile Switch
+  m_TagString: Projectile Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 2559460708707548967}
   m_Layer: 0
   m_Name: Projectile Switch
-  m_TagString: Untagged
+  m_TagString: Projectile Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

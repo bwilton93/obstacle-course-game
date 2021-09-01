@@ -19,20 +19,25 @@ public class ObjectHit : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (this.name == "Window Lock Switch") {
-            door.transform.position = new Vector3(door.transform.position.x, -0.9f, door.transform.position.z); 
-            door.GetComponent<Collider>().enabled = false;
+        switch (gameObject.tag) {
+            case "Projectile Switch":
+                door.transform.position = new Vector3(door.transform.position.x, -0.9f, door.transform.position.z); 
+                door.GetComponent<Collider>().enabled = false;
 
-            // Changes door lock switch to indicate door is now open
-            GetComponent<MeshRenderer>().material.color = new Vector4(0.4245283f, 0f, 0f, 1f);
+                // Changes door lock switch to indicate door is now open
+                GetComponent<MeshRenderer>().material.color = new Vector4(0.4245283f, 0f, 0f, 1f);
 
-            Destroy(other.gameObject);
-        }
+                Destroy(other.gameObject);
+                break;
 
-        if (gameObject.tag == "Obstacle" && other.gameObject == GameObject.Find("Player (Cappy)")) {
-            StartCoroutine(changeColor());
-            playerLives.playerLives -= 1;
-            player.GetComponent<PlayerController>().resetLevel();
+            case "Obstacle":
+                if (other.gameObject == GameObject.Find("Player (Cappy)")) {
+                    Debug.Log("Obstacle hit");
+                    StartCoroutine(changeColor());
+                    playerLives.playerLives -= 1;
+                    player.GetComponent<PlayerController>().resetLevel();
+                } 
+                break;
         }
     }
    
