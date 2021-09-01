@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8290fdd09887f9540bffcc6960ef6de7, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9a56e283dfc092040982f56b0feb0acf, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -548,7 +548,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293061213}
-  m_LocalRotation: {x: 0.17591986, y: 0.8204732, z: -0.42470813, w: 0.33985117}
+  m_LocalRotation: {x: 0.1759199, y: 0.82047325, z: -0.4247082, w: 0.33985114}
   m_LocalPosition: {x: -5, y: 11, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -791,9 +791,10 @@ GameObject:
   - component: {fileID: 474918999}
   - component: {fileID: 474918998}
   - component: {fileID: 474919002}
+  - component: {fileID: 474919003}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,6 +895,18 @@ MonoBehaviour:
   blackOutSquare: {fileID: 1630499614}
   player: {fileID: 494428708}
   playerStats: {fileID: 0}
+--- !u!114 &474919003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474918997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8dadd509a770e345bb77e1ab5a25a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494428708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8339254970903949014, guid: 741f7c08b8a58184bbf6ab1eea390e37, type: 3}
@@ -1026,9 +1039,10 @@ GameObject:
   m_Component:
   - component: {fileID: 737358410}
   - component: {fileID: 737358409}
+  - component: {fileID: 737358411}
   m_Layer: 0
   m_Name: Player Stats Container
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1063,6 +1077,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737358411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737358408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8dadd509a770e345bb77e1ab5a25a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &792668073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1197,7 +1223,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961283357}
-  m_LocalRotation: {x: 0.17591986, y: 0.8204732, z: -0.42470813, w: 0.33985117}
+  m_LocalRotation: {x: 0.1759199, y: 0.82047325, z: -0.4247082, w: 0.33985114}
   m_LocalPosition: {x: -5, y: 11, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
