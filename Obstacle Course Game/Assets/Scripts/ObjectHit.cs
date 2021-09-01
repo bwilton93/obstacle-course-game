@@ -18,11 +18,6 @@ public class ObjectHit : MonoBehaviour
         playerLives = playerStats.GetComponent<PlayerStats>();
     }
 
-    private void OnCollisionEnter(Collision other) {
-        StartCoroutine(changeColor());
-        playerLives.playerLives -= 1;
-    }
-
     private void OnTriggerEnter(Collider other) {
         if (this.name == "Window Lock Switch") {
             door.transform.position = new Vector3(door.transform.position.x, -0.9f, door.transform.position.z); 
@@ -32,6 +27,12 @@ public class ObjectHit : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = new Vector4(0.4245283f, 0f, 0f, 1f);
 
             Destroy(other.gameObject);
+        }
+
+        if (gameObject.tag == "Obstacle" && other.gameObject == GameObject.Find("Player (Cappy)")) {
+            StartCoroutine(changeColor());
+            playerLives.playerLives -= 1;
+            player.GetComponent<PlayerController>().resetLevel();
         }
     }
    

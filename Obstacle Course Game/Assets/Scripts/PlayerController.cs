@@ -63,8 +63,6 @@ public class PlayerController : MonoBehaviour
             // transform.position = levelStartPos;
             // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             resetLevel();
-            playerStats.GetComponent<PlayerStats>().totalScore -= playerStats.GetComponent<PlayerStats>().levelScore;
-            playerStats.GetComponent<PlayerStats>().levelScore = 0;
         }
     }
 
@@ -141,6 +139,8 @@ public class PlayerController : MonoBehaviour
     
     public void resetLevel() {
         SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
+        playerStats.GetComponent<PlayerStats>().totalScore -= playerStats.GetComponent<PlayerStats>().levelScore;
+        playerStats.GetComponent<PlayerStats>().levelScore = 0;
     }
 
     // *****

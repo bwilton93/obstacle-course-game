@@ -5,7 +5,7 @@ using UnityEngine;
 public class DontDestroyOnLoad : MonoBehaviour
 {
     public void Awake() {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("GameController");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(gameObject.tag);
         
         if (objs.Length > 2) {
             Destroy(gameObject);
