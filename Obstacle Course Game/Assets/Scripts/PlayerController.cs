@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
         GetComponent<Rigidbody>().drag = playerDrag;
     }
 
+    void awake() {
+    }
+
     // Player movement has to be in FixedUpdate due to the nature of AddForce
     void FixedUpdate() {
         if (!touchingLift) {
@@ -50,6 +53,10 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
+            StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(false));
+        }
+
         touchingLift = lift.GetComponent<WinCondition>().touchingLift;
 
         if (touchingLift) {
@@ -63,10 +70,6 @@ public class PlayerController : MonoBehaviour
             // transform.position = levelStartPos;
             // GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             resetLevel();
-        }
-
-        if(transform.position.z == targetPos.z) {
-            StartCoroutine(SceneTransitionTimer());
         }
     }
 
@@ -118,6 +121,15 @@ public class PlayerController : MonoBehaviour
                 playerStats.GetComponent<PlayerStats>().currentLevel++;
                 scoreAdded = true;
             }
+        }
+        
+        StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(true));
+        // Debug.Log(transform.position.z);
+        // Debug.Log(targetPos.z);
+
+        if(transform.position.z == targetPos.z) {
+            // StartCoroutine(SceneTransitionTimer());
+            SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         }
     }
 

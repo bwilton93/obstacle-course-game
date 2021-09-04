@@ -16,13 +16,13 @@ public class FadeToBlack : MonoBehaviour
         playerStats = GameObject.Find("Player Stats Container");
         player = GameObject.Find("Player (Cappy)");
 
-        if (player.GetComponent<PlayerController>().moveToLift) {
-            StartCoroutine(FadeBlackOutSquare(true));
-        }
+        // if (player.GetComponent<PlayerController>().moveToLift) {
+        //     StartCoroutine(FadeBlackOutSquare(true));
+        // }
 
-        if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
-            StartCoroutine(FadeBlackOutSquare(false));
-        }
+        // if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
+        //     StartCoroutine(FadeBlackOutSquare(false));
+        // }
     }
 
     private void Awake() {       
@@ -49,7 +49,7 @@ public class FadeToBlack : MonoBehaviour
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 fadeToBlack = true;
-                player.GetComponent<PlayerController>().movementLocked = false;
+                // player.GetComponent<PlayerController>().movementLocked = false;
                 yield return null;
             }
         }
