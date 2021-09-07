@@ -1388,6 +1388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Cappy)
       objectReference: {fileID: 0}
+    - target: {fileID: 8339254970903949016, guid: 741f7c08b8a58184bbf6ab1eea390e37, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8339254970903949018, guid: 741f7c08b8a58184bbf6ab1eea390e37, type: 3}
       propertyPath: m_RootOrder
       value: 7

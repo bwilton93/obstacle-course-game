@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -753,6 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -979,6 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 1325426226}
@@ -1186,6 +1189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Cappy)
       objectReference: {fileID: 0}
+    - target: {fileID: 8339254970903949016, guid: 741f7c08b8a58184bbf6ab1eea390e37, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8339254970903949018, guid: 741f7c08b8a58184bbf6ab1eea390e37, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -1268,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -1456,6 +1464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -1568,6 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -1604,6 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -1942,6 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
@@ -2054,6 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLockedOpen: 0
   player: {fileID: 0}
   playerStats: {fileID: 0}
   door: {fileID: 0}
