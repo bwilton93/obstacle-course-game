@@ -6,7 +6,7 @@ public class Dropper : MonoBehaviour
 {
     public GameObject[] obstacles;
     
-    public float waitTime = f;
+    public float waitTime = 3f;
     public float dropTime;
 
     private int obstacleChild = 0;
