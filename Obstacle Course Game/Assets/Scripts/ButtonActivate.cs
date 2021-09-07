@@ -8,10 +8,11 @@ public class ButtonActivate : MonoBehaviour
     public GameObject doorLockSwitch;
     public GameObject door;
     public GameObject door2;
+    public GameObject obstacles;
     public GameObject projectileEmitter;
     public GameObject player;
     private Scoring playerScore;
-    public bool windowLockedOpen = false;
+    // public bool windowLockedOpen = false;
 
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Switch triggered");
@@ -41,9 +42,9 @@ public class ButtonActivate : MonoBehaviour
                 StartCoroutine(doorCloseTimer(door2));
             }
 
-            // if (doorOpen == true) {
-            // }
-
+            if (obstacles != null) {
+                obstacles.GetComponent<Dropper>().timerStarted = true;
+            }
         }
 
         if (this.name == "Projectile Button") {
@@ -59,18 +60,27 @@ public class ButtonActivate : MonoBehaviour
 
     IEnumerator doorCloseTimer(GameObject arg) {
         yield return new WaitForSeconds(3);
-        if (doorLockSwitch.GetComponent<ObjectHit>().doorLockedOpen == false) {
-            arg.transform.position = new Vector3(arg.transform.position.x, 0.9f, arg.transform.position.z); 
-            doorOpen = false;
-            door.GetComponent<Collider>().enabled = true;
-            GetComponent<Collider>().enabled = true;
-            GetComponent<Collider>().isTrigger = true; 
+        if (doorLockSwitch != null) {
+            if (doorLockSwitch.GetComponent<ObjectHit>().doorLockedOpen == false) {
+                doorClose(arg);
+            }
+        } else {
+            doorClose(arg);
         }
+
     }
 
     IEnumerator buttonDisabledTimer() {
         yield return new WaitForSeconds(5);
         GetComponent<Collider>().enabled = true;
         GetComponent<Collider>().isTrigger = true;
+    }
+
+    private void doorClose(GameObject arg) {
+        arg.transform.position = new Vector3(arg.transform.position.x, 0.9f, arg.transform.position.z); 
+        doorOpen = false;
+        door.GetComponent<Collider>().enabled = true;
+        GetComponent<Collider>().enabled = true;
+        GetComponent<Collider>().isTrigger = true; 
     }
 }

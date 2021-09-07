@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Projectile Switch
+  - Dropper Obstacle
   layers:
   - Default
   - TransparentFX

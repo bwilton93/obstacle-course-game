@@ -845,7 +845,6 @@ GameObject:
   - component: {fileID: 700904402}
   - component: {fileID: 700904401}
   - component: {fileID: 700904400}
-  - component: {fileID: 700904399}
   m_Layer: 0
   m_Name: Wall (8)
   m_TagString: Untagged
@@ -853,23 +852,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &700904399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700904398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &700904400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1276,7 +1258,6 @@ GameObject:
   - component: {fileID: 1046909396}
   - component: {fileID: 1046909395}
   - component: {fileID: 1046909394}
-  - component: {fileID: 1046909393}
   m_Layer: 0
   m_Name: Wall (10)
   m_TagString: Untagged
@@ -1284,23 +1265,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1046909393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046909392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1046909394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1519,7 +1483,6 @@ GameObject:
   - component: {fileID: 1131918338}
   - component: {fileID: 1131918337}
   - component: {fileID: 1131918336}
-  - component: {fileID: 1131918335}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Untagged
@@ -1527,23 +1490,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1131918335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131918334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1131918336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1650,7 +1596,6 @@ GameObject:
   - component: {fileID: 1302295985}
   - component: {fileID: 1302295984}
   - component: {fileID: 1302295983}
-  - component: {fileID: 1302295982}
   m_Layer: 0
   m_Name: Wall (11)
   m_TagString: Untagged
@@ -1658,23 +1603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1302295982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302295981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1302295983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1768,7 +1696,6 @@ GameObject:
   - component: {fileID: 1472586430}
   - component: {fileID: 1472586429}
   - component: {fileID: 1472586428}
-  - component: {fileID: 1472586427}
   m_Layer: 0
   m_Name: Wall (9)
   m_TagString: Untagged
@@ -1776,23 +1703,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1472586427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472586426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1472586428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1974,7 +1884,6 @@ GameObject:
   - component: {fileID: 1716325108}
   - component: {fileID: 1716325107}
   - component: {fileID: 1716325106}
-  - component: {fileID: 1716325105}
   m_Layer: 0
   m_Name: Wall (7)
   m_TagString: Untagged
@@ -1982,23 +1891,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1716325105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716325104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1716325106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2161,7 +2053,6 @@ GameObject:
   - component: {fileID: 1973219394}
   - component: {fileID: 1973219393}
   - component: {fileID: 1973219392}
-  - component: {fileID: 1973219391}
   m_Layer: 0
   m_Name: Wall (6)
   m_TagString: Untagged
@@ -2169,23 +2060,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1973219391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973219390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1973219392
 BoxCollider:
   m_ObjectHideFlags: 0

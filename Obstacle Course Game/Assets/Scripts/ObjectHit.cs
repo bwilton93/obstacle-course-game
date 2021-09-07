@@ -13,7 +13,7 @@ public class ObjectHit : MonoBehaviour
     public GameObject door;
     public GameObject door2;
     private PlayerStats playerLives;
-    
+
     void Start() {
         player = GameObject.Find("Player (Cappy)");
         playerStats = GameObject.Find("Player Stats Container");
@@ -41,12 +41,17 @@ public class ObjectHit : MonoBehaviour
 
             case "Obstacle":
                 if (other.gameObject == GameObject.Find("Player (Cappy)")) {
-                    Debug.Log("Obstacle hit");
-                    StartCoroutine(changeColor());
-                    playerLives.playerLives -= 1;
-                    player.GetComponent<PlayerController>().resetLevel();
-                } 
+                    obstacleHit();
+                }
                 break;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject == GameObject.Find("Player (Cappy)")) {
+            obstacleHit();
+            GameObject.Find("Obstacles").GetComponent<Dropper>().timerStarted = false;
+            GameObject.Find("Obstacles").GetComponent<Dropper>().levelReset = true;
         }
     }
    
@@ -54,5 +59,12 @@ public class ObjectHit : MonoBehaviour
         player.GetComponent<MeshRenderer>().material.color = Color.red;
         yield return new WaitForSeconds(waitTime);
         player.GetComponent<MeshRenderer>().material.color = playerColor;
+    }
+
+    private void obstacleHit() {
+        Debug.Log("Obstacle hit");
+        StartCoroutine(changeColor());
+        playerLives.playerLives -= 1;
+        player.GetComponent<PlayerController>().resetLevel();
     }
 }

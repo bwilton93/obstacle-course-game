@@ -431,7 +431,6 @@ GameObject:
   - component: {fileID: 382398735}
   - component: {fileID: 382398734}
   - component: {fileID: 382398733}
-  - component: {fileID: 382398737}
   m_Layer: 0
   m_Name: Wall (4)
   m_TagString: Untagged
@@ -515,23 +514,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &382398737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382398732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1001 &439481041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,7 +640,6 @@ GameObject:
   - component: {fileID: 463608910}
   - component: {fileID: 463608909}
   - component: {fileID: 463608908}
-  - component: {fileID: 463608912}
   m_Layer: 0
   m_Name: Wall (6)
   m_TagString: Untagged
@@ -742,23 +723,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463608912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463608907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1 &570916740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1219,6 @@ GameObject:
   - component: {fileID: 1325426230}
   - component: {fileID: 1325426229}
   - component: {fileID: 1325426228}
-  - component: {fileID: 1325426227}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1263,23 +1226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1325426227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325426226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1325426228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1368,7 +1314,6 @@ GameObject:
   - component: {fileID: 1371801478}
   - component: {fileID: 1371801477}
   - component: {fileID: 1371801476}
-  - component: {fileID: 1371801480}
   m_Layer: 0
   m_Name: Wall (8)
   m_TagString: Untagged
@@ -1452,23 +1397,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1371801480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371801475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1 &1396412530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1409,6 @@ GameObject:
   - component: {fileID: 1396412533}
   - component: {fileID: 1396412532}
   - component: {fileID: 1396412531}
-  - component: {fileID: 1396412535}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Untagged
@@ -1565,23 +1492,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1396412535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396412530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1 &1431301673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1504,6 @@ GameObject:
   - component: {fileID: 1431301677}
   - component: {fileID: 1431301676}
   - component: {fileID: 1431301675}
-  - component: {fileID: 1431301674}
   m_Layer: 0
   m_Name: Wall (10)
   m_TagString: Untagged
@@ -1602,23 +1511,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1431301674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431301673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!65 &1431301675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1857,7 +1749,6 @@ GameObject:
   - component: {fileID: 1829828768}
   - component: {fileID: 1829828767}
   - component: {fileID: 1829828766}
-  - component: {fileID: 1829828770}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -1941,23 +1832,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1829828770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829828765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1 &1928768762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1844,6 @@ GameObject:
   - component: {fileID: 1928768765}
   - component: {fileID: 1928768764}
   - component: {fileID: 1928768763}
-  - component: {fileID: 1928768767}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -2054,23 +1927,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1928768767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928768762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274eab5713b297e43bd3fabf24c9e287, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLockedOpen: 0
-  player: {fileID: 0}
-  playerStats: {fileID: 0}
-  door: {fileID: 0}
-  door2: {fileID: 0}
 --- !u!1001 &1457453827345995109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2130,7 +1986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lift
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4722085127112759387, guid: 1fce145fe7567604390a506d686dea52, type: 3}
+    - {fileID: 5664089763083380633, guid: 1fce145fe7567604390a506d686dea52, type: 3}
+    - {fileID: 3771408162154162253, guid: 1fce145fe7567604390a506d686dea52, type: 3}
+    - {fileID: 3436306148130135024, guid: 1fce145fe7567604390a506d686dea52, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1fce145fe7567604390a506d686dea52, type: 3}
 --- !u!1001 &1970398256666073556
 PrefabInstance:
