@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         
-        StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(true));
+        StartCoroutine(GameObject.Find("Blackout Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(true));
         // Debug.Log(transform.position.z);
         // Debug.Log(targetPos.z);
 

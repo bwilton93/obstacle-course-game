@@ -20,6 +20,12 @@ public class FadeToBlack : MonoBehaviour
         //     StartCoroutine(FadeBlackOutSquare(true));
         // }
 
+        if (SceneManager.GetActiveScene().buildIndex == 0) {
+            GetComponent<Canvas>().enabled = false;
+        } else {
+            GetComponent<Canvas>().enabled = true;
+        }
+
         if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
             StartCoroutine(FadeBlackOutSquare(false));
         }
