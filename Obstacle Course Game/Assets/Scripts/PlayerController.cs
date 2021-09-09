@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     void Start() {
         lift = GameObject.Find("Lift");
         playerStats = GameObject.Find("Player Stats Container");
-        if(playerStats.GetComponent<PlayerStats>().levelscore == 1) {
+        if(playerStats.GetComponent<PlayerStats>().currentLevel == 1) {
             PrintInstructions();
         }
         liftPosition();

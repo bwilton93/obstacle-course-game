@@ -20,9 +20,9 @@ public class FadeToBlack : MonoBehaviour
         //     StartCoroutine(FadeBlackOutSquare(true));
         // }
 
-        // if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
-        //     StartCoroutine(FadeBlackOutSquare(false));
-        // }
+        if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
+            StartCoroutine(FadeBlackOutSquare(false));
+        }
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack, int fadeSpeed = 2) {

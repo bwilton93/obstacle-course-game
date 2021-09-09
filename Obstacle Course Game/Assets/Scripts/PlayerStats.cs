@@ -10,9 +10,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public int levelScore = 0;
     [SerializeField] public int totalScore = 0;
 
-    void Update() {
-        if (SceneManager.GetActiveScene().buildIndex == currentLevel) {
-            StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(false));
-        }
-    }
+    // void Update() {
+    //     if (SceneManager.GetActiveScene().buildIndex == currentLevel) {
+    //         StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(false));
+    //     }
+    // }
 }
