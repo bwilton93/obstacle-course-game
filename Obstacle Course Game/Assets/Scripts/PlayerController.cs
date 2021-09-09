@@ -31,9 +31,11 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        PrintInstructions();
         lift = GameObject.Find("Lift");
         playerStats = GameObject.Find("Player Stats Container");
+        if(playerStats.GetComponent<PlayerStats>().levelscore == 1) {
+            PrintInstructions();
+        }
         liftPosition();
 
         levelStartPos = transform.position;
