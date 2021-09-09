@@ -25,9 +25,6 @@ public class FadeToBlack : MonoBehaviour
         // }
     }
 
-    private void Awake() {       
-    }
-
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack, int fadeSpeed = 2) {
         Color objectColor = blackOutSquare.GetComponent<Image>().color;
         float fadeAmount;

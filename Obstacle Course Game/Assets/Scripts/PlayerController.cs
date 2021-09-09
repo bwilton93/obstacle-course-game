@@ -53,10 +53,6 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (SceneManager.GetActiveScene().buildIndex == playerStats.GetComponent<PlayerStats>().currentLevel) {
-            StartCoroutine(GameObject.Find("Canvas").GetComponent<FadeToBlack>().FadeBlackOutSquare(false));
-        }
-
         touchingLift = lift.GetComponent<WinCondition>().touchingLift;
 
         if (touchingLift) {
@@ -128,6 +124,9 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(targetPos.z);
 
         if(transform.position.z == targetPos.z) {
+            if(playerStats.GetComponent<PlayerStats>().currentLevel == SceneManager.sceneCountInBuildSettings) {
+                playerStats.GetComponent<PlayerStats>().currentLevel = 0;
+            }
             // StartCoroutine(SceneTransitionTimer());
             SceneManager.LoadScene(playerStats.GetComponent<PlayerStats>().currentLevel);
         }
