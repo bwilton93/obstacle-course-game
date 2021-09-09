@@ -1191,9 +1191,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2559460708119888571, guid: 89410141014859347b48a099be87ec91, type: 3}
+      propertyPath: m_TagString
+      value: Projectile Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559460708415978450, guid: 89410141014859347b48a099be87ec91, type: 3}
+      propertyPath: m_TagString
+      value: Projectile Switch
+      objectReference: {fileID: 0}
     - target: {fileID: 2559460708707548964, guid: 89410141014859347b48a099be87ec91, type: 3}
       propertyPath: m_Name
       value: Projectile Emitter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559460708707548964, guid: 89410141014859347b48a099be87ec91, type: 3}
+      propertyPath: m_TagString
+      value: Projectile Switch
       objectReference: {fileID: 0}
     - target: {fileID: 2559460708707548967, guid: 89410141014859347b48a099be87ec91, type: 3}
       propertyPath: m_RootOrder
