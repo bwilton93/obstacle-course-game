@@ -33,3 +33,6 @@ Move through course and dodge obstacles.
 
 Game loop:
 Get from A to B.
+
+By the end of the project I learnt many new skills, including cool features like fading out on level change, which was particularly hard to get working.
+The game evolved a bit and became a sequence of 5 levels with doors and collectibles.
